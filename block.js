@@ -87,16 +87,7 @@ function enable(icon = true) {
 
 	blockingEnabled = true;
 	if (icon) {
-		chrome.contextMenus.create({
-			title: 'Disable',
-			id: 'disabled',
-			onclick: function(e){
-				disable();
-			}
-
-		}, function(){});
 		chrome.browserAction.setIcon("enabled.png");
-		chrome.contextMenus.remove('enabled');
 	}
 }
 
@@ -109,16 +100,7 @@ function disable(icon = true) {
 
 	blockingEnabled = false;
 	if (icon) {
-		chrome.contextMenus.create({
-			title: 'Enable',
-			id: 'enabled',
-			onclick: function(e){
-				enable();
-			}
-
-		}, function(){});
 		chrome.browserAction.setIcon("disabled.png");
-		chrome.contextMenus.remove('disabled');
 	}
 }
 
