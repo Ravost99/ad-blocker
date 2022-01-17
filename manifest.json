@@ -1,0 +1,22 @@
+{
+  "name": "EZBlockr",
+  "version": "10.0",
+  "manifest_version": 2,
+  "description": "Easy AD-Blocker to block all of those unwanted ads.",
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "enabled.png"
+  },
+  "background": {
+    "scripts": ["default_filters.js", "block.js"]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "icons": {
+     "16": "enabled.png"
+  },
+  "permissions": ["http://*/*", "https://*/*", "ws://*/*", "contextMenus", "wss://*/*", "webRequest", "webRequestBlocking", "storage", "privacy"],
+  "incognito": "spanning"
+}
